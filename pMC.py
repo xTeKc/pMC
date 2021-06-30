@@ -1,3 +1,3 @@
 import subprocess
 
-subprocess.call("ifconfig", shell=True)
+subprocess.call("ifconfig enp0 down", shell=True)
