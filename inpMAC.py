@@ -11,3 +11,4 @@ subprocess.call("ip a " + interface + " up", shell=True)
 
 subprocess.call(["ip a", interface, "down"])
 subprocess.call(["ip a", interface, "hw", "ether", new_mac])
+subprocess.call(["ip a", interface, "up"])
