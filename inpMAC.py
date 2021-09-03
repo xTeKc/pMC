@@ -2,7 +2,7 @@ import subprocess
 import optparse
 
 def change_mac(interface, new_mac):
-    print("[+] Changing MAC address for " + interface + " to " + new_mac)
+    print(f"[+] Changing MAC address for  {interface} to {new_mac}")
 
     subprocess.call(["ip a", interface, "down"])
     subprocess.call(["ip a", interface, "hw", "ether", new_mac])
