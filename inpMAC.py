@@ -6,7 +6,7 @@ parser = optparse.OptionParser()
 parser.add_option("-i", "--interface", dest="interface", help="Interface to change its MAC Address")
 parser.add_option("-m", "--mac", dest="new_mac", help="New MAC Address")
 
-parser.parse_args()
+(options, arguments) = parser.parse_args()
 
 interface = raw_input("Interface > ")
 new_mac = raw_input("New MAC > ")
