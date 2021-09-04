@@ -24,3 +24,5 @@ options = get_args()
 
 ip_a_result = subprocess.check_output(["ip a", options.interface])
 print(ip_a_result)
+
+re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:", ip_a_result)
