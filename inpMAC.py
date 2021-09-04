@@ -21,4 +21,4 @@ def change_mac(interface, new_mac):
 options = get_args()
 #change_mac(options.interface, options.new_mac)
 
-subprocess.check_output(["ip a", options.interface])
+ip_a_result = subprocess.check_output(["ip a", options.interface])
