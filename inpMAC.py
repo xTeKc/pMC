@@ -23,3 +23,4 @@ options = get_args()
 #change_mac(options.interface, options.new_mac)
 
 ip_a_result = subprocess.check_output(["ip a", options.interface])
+print(ip_a_result)
