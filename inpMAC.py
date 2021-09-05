@@ -30,4 +30,4 @@ def get_current_mac(interface):
 options = get_args()
 #change_mac(options.interface, options.new_mac)
 
-get_current_mac(options.interface)
+current_mac = get_current_mac(options.interface)
