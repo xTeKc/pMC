@@ -23,8 +23,6 @@ options = get_args()
 #change_mac(options.interface, options.new_mac)
 
 ip_a_result = subprocess.check_output(["ip a", options.interface])
-print(ip_a_result)
-
 mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:", ip_a_result)
 if mac_address_search_result:
     print(mac_address_search_result.group(0))
