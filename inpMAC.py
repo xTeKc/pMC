@@ -23,7 +23,7 @@ def get_current_mac(interface):
     ip_a_result = subprocess.check_output(["ip a", interface])
     mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:", ip_a_result)
     if mac_address_search_result:
-        print(mac_address_search_result.group(0))
+        return mac_address_search_result.group(0)
     else:
         print("[-] Could not read MAC Address")
 
