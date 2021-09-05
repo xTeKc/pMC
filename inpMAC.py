@@ -29,5 +29,5 @@ def get_current_mac(interface):
 
 options = get_args()
 current_mac = get_current_mac(options.interface)
-print(f"Current MAC = {current_mac}")
+print(f"Current MAC = {str(current_mac)}")
 #change_mac(options.interface, options.new_mac)
