@@ -34,3 +34,4 @@ print(f"Current MAC = {str(current_mac)}")
 
 change_mac(options.interface, options.new_mac)
 
+current_mac = get_current_mac(options.interface)
