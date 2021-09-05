@@ -19,12 +19,14 @@ def change_mac(interface, new_mac):
     subprocess.call(["ip a", interface, "hw", "ether", new_mac])
     subprocess.call(["ip a", interface, "up"])
 
-options = get_args()
-#change_mac(options.interface, options.new_mac)
-
-ip_a_result = subprocess.check_output(["ip a", options.interface])
+def get_current_mac(interface):
+    ip_a_result = subprocess.check_output(["ip a", options.interface])
 mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:", ip_a_result)
 if mac_address_search_result:
     print(mac_address_search_result.group(0))
 else:
     print("[-] Could not read MAC Address")
+
+options = get_args()
+#change_mac(options.interface, options.new_mac)
+
