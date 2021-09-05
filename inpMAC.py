@@ -20,7 +20,7 @@ def change_mac(interface, new_mac):
     subprocess.call(["ip a", interface, "up"])
 
 def get_current_mac(interface):
-    ip_a_result = subprocess.check_output(["ip a", options.interface])
+    ip_a_result = subprocess.check_output(["ip a", interface])
     mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:", ip_a_result)
     if mac_address_search_result:
         print(mac_address_search_result.group(0))
